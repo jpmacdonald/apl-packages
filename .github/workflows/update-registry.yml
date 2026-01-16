@@ -9,7 +9,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'registry/**'
+      - 'packages/**'
   workflow_dispatch:  # Manual trigger
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build apl-pkg
         working-directory: apl
-        run: cargo build --release -p apl-indexer
+        run: cargo build --release -p apl-pkg
 
       - name: Generate index
         env:
@@ -42,7 +42,7 @@ jobs:
           APL_ARTIFACT_STORE_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
           ./apl/target/release/apl-pkg index \
-            --registry registry \
+            --registry packages \
             --output index
 
       - name: Sign index
