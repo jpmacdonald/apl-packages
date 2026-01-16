@@ -30,7 +30,7 @@ jobs:
 
       - name: Build apl-pkg
         working-directory: apl
-        run: cargo build --release -p apl-registry
+        run: cargo build --release -p apl-indexer
 
       - name: Generate index
         env:
