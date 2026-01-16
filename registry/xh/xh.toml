@@ -1,0 +1,35 @@
+[package]
+name = "xh"
+description = "Friendly and fast tool for sending HTTP requests"
+homepage = "https://github.com/ducaale/xh"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "ducaale/xh"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

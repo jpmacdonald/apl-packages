@@ -1,0 +1,35 @@
+[package]
+name = "age"
+description = "Simple, modern, secure file encryption"
+homepage = "https://github.com/FiloSottile/age"
+license = "BSD-3-Clause"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "FiloSottile/age"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

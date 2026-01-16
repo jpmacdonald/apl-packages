@@ -1,0 +1,35 @@
+[package]
+name = "charm"
+description = "Tool for managing Juju Charms"
+homepage = "https://github.com/juju/charmstore-client"
+license = "GPL-3.0-only"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "juju/charmstore-client"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

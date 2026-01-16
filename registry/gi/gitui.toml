@@ -1,0 +1,35 @@
+[package]
+name = "gitui"
+description = "Blazing fast terminal-ui for git written in rust"
+homepage = "https://github.com/gitui-org/gitui"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "gitui-org/gitui"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = ["openssl@3"]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

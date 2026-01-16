@@ -1,0 +1,35 @@
+[package]
+name = "lazygit"
+description = "Simple terminal UI for git commands"
+homepage = "https://github.com/jesseduffield/lazygit/"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "jesseduffield/lazygit"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

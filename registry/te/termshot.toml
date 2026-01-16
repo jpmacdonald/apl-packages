@@ -1,0 +1,35 @@
+[package]
+name = "termshot"
+description = "Creates screenshots based on terminal command output"
+homepage = "https://github.com/homeport/termshot"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "homeport/termshot"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

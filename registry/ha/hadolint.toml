@@ -1,0 +1,35 @@
+[package]
+name = "hadolint"
+description = "Smarter Dockerfile linter to validate best practices"
+homepage = "https://github.com/hadolint/hadolint"
+license = "GPL-3.0-only"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "hadolint/hadolint"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = ["gmp"]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

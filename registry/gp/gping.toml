@@ -1,0 +1,35 @@
+[package]
+name = "gping"
+description = "Ping, but with a graph"
+homepage = "https://github.com/orf/gping"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "orf/gping"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

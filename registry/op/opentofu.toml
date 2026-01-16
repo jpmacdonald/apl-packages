@@ -1,0 +1,35 @@
+[package]
+name = "opentofu"
+description = "Drop-in replacement for Terraform. Infrastructure as Code Tool"
+homepage = "https://opentofu.org/"
+license = "MPL-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "opentofu/opentofu"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

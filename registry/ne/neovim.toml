@@ -1,0 +1,44 @@
+[package]
+name = "neovim"
+description = "Ambitious Vim-fork focused on extensibility and agility"
+homepage = "https://neovim.io/"
+license = "Apache-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "neovim/neovim"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = [
+    "tree-sitter@0.25",
+    "gettext",
+    "libuv",
+    "lpeg",
+    "luajit",
+    "luv",
+    "unibilium",
+    "utf8proc",
+]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

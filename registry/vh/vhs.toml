@@ -1,0 +1,38 @@
+[package]
+name = "vhs"
+description = "Your CLI home video recorder"
+homepage = "https://github.com/charmbracelet/vhs"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "charmbracelet/vhs"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = [
+    "ffmpeg",
+    "ttyd",
+]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

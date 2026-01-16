@@ -1,0 +1,35 @@
+[package]
+name = "etcd"
+description = "Key value store for shared configuration and service discovery"
+homepage = "https://github.com/etcd-io/etcd"
+license = "Apache-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "etcd-io/etcd"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

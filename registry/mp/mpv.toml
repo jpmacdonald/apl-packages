@@ -1,0 +1,52 @@
+[package]
+name = "mpv"
+description = "Media player based on MPlayer and mplayer2"
+homepage = "https://mpv.io"
+license = "LicenseRef-Homebrew-cannot-represent"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "mpv-player/mpv"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = [
+    "ffmpeg",
+    "jpeg-turbo",
+    "libarchive",
+    "libass",
+    "libbluray",
+    "libplacebo",
+    "little-cms2",
+    "luajit",
+    "mujs",
+    "rubberband",
+    "uchardet",
+    "vapoursynth",
+    "vulkan-loader",
+    "yt-dlp",
+    "zimg",
+    "molten-vk",
+]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

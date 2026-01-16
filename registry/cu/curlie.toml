@@ -1,0 +1,35 @@
+[package]
+name = "curlie"
+description = "Power of curl, ease of use of httpie"
+homepage = "https://rs.github.io/curlie/"
+license = "MIT"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "rs/curlie"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

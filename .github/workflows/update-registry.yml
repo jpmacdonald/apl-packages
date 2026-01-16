@@ -1,0 +1,78 @@
+# APL Registry - Update Index
+#
+# Rebuilds the binary index from registry templates,
+# signs it with Ed25519, and uploads to R2.
+
+name: Update Registry Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry/**'
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  update-index:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout registry
+        uses: actions/checkout@v4
+
+      - name: Checkout apl (for apl-pkg binary)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/apl
+          path: apl
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build apl-pkg
+        working-directory: apl
+        run: cargo build --release -p apl-registry
+
+      - name: Generate index
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APL_ARTIFACT_STORE_ENABLED: "true"
+          APL_ARTIFACT_STORE_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          APL_ARTIFACT_STORE_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+          APL_ARTIFACT_STORE_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+          APL_ARTIFACT_STORE_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          ./apl/target/release/apl-pkg index \
+            --registry registry \
+            --output index
+
+      - name: Sign index
+        env:
+          APL_SIGNING_KEY: ${{ secrets.APL_SIGNING_KEY }}
+        run: |
+          ./apl/target/release/apl-pkg sign \
+            --input index \
+            --output index.sig
+
+      - name: Upload to R2
+        env:
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+          R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          # Upload index, signature, and latest manifest
+          # Using AWS CLI with R2-compatible endpoint
+          aws s3 cp index s3://$R2_BUCKET/index \
+            --endpoint-url $R2_ENDPOINT
+          aws s3 cp index.sig s3://$R2_BUCKET/index.sig \
+            --endpoint-url $R2_ENDPOINT
+          aws s3 cp latest.json s3://$R2_BUCKET/latest.json \
+            --endpoint-url $R2_ENDPOINT
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-index
+          path: |
+            index
+            index.sig

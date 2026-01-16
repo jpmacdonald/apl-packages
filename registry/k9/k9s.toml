@@ -1,0 +1,35 @@
+[package]
+name = "k9s"
+description = "Kubernetes CLI To Manage Your Clusters In Style!"
+homepage = "https://k9scli.io/"
+license = "Apache-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "derailed/k9s"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

@@ -1,0 +1,35 @@
+[package]
+name = "helix"
+description = "Post-modern modal text editor"
+homepage = "https://helix-editor.com"
+license = "MPL-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "helix-editor/helix"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""

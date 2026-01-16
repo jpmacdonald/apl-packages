@@ -1,0 +1,38 @@
+[package]
+name = "gleam"
+description = "Statically typed language for the Erlang VM"
+homepage = "https://gleam.run"
+license = "Apache-2.0"
+tags = [
+    "imported",
+    "homebrew",
+]
+
+[discovery]
+github = "gleam-lang/gleam"
+tag_pattern = "{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin"
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin"
+
+[dependencies]
+runtime = [
+    "erlang",
+    "rebar3",
+]
+build = []
+optional = []
+
+[install]
+lib = []
+include = []
+
+[hints]
+post_install = ""
