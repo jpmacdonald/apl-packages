@@ -29,6 +29,11 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
+      - name: Rust Cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: apl -> target
+
       - name: Build apl-pkg
         working-directory: apl
         run: cargo build --release -p apl-pkg
