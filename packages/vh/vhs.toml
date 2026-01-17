@@ -16,12 +16,6 @@ include_prereleases = false
 [assets]
 skip_checksums = false
 
-[assets.arm64-macos]
-suffix = "aarch64-apple-darwin"
-
-[assets.x86_64-macos]
-suffix = "x86_64-apple-darwin"
-
 [dependencies]
 runtime = [
     "ffmpeg",
