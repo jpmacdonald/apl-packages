@@ -67,8 +67,6 @@ jobs:
             --endpoint-url $R2_ENDPOINT
           aws s3 cp index.sig s3://$R2_BUCKET/index.sig \
             --endpoint-url $R2_ENDPOINT
-          aws s3 cp latest.json s3://$R2_BUCKET/latest.json \
-            --endpoint-url $R2_ENDPOINT
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
