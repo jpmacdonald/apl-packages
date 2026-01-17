@@ -46,7 +46,7 @@ jobs:
             --registry packages \
             index \
             --output index \
-            --force
+            --full
 
       - name: Sign Index
         env:
