@@ -45,8 +45,7 @@ jobs:
           ./apl/target/release/apl-pkg \
             --registry packages \
             index \
-            --output index \
-            --full
+            --output index
 
       - name: Sign Index
         env:
