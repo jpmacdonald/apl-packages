@@ -1,0 +1,19 @@
+[package]
+name = "ruby"
+description = "Dynamic, open source programming language with a focus on simplicity and productivity"
+homepage = "https://www.ruby-lang.org/"
+license = "Ruby"
+tags = ["language", "interpreter", "ports"]
+
+[discovery]
+ports = "ruby"
+
+[assets]
+skip_checksums = false
+
+[dependencies]
+
+[install]
+bin = ["ruby", "gem", "irb"]
+
+[hints]

@@ -1,0 +1,19 @@
+[package]
+name = "aws-cli"
+description = "Official Amazon AWS command-line interface"
+homepage = "https://aws.amazon.com/cli/"
+license = "Apache-2.0"
+tags = ["cloud", "amazon", "ports"]
+
+[discovery]
+ports = "aws"
+
+[assets]
+skip_checksums = false
+
+[dependencies]
+
+[install]
+bin = ["aws"]
+
+[hints]

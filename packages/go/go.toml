@@ -1,0 +1,19 @@
+[package]
+name = "go"
+description = "Open source programming language that makes it easy to build simple, reliable, and efficient software"
+homepage = "https://go.dev/"
+license = "BSD-3-Clause"
+tags = ["language", "compiler", "ports"]
+
+[discovery]
+ports = "go"
+
+[assets]
+skip_checksums = false
+
+[dependencies]
+
+[install]
+bin = ["go", "gofmt"]
+
+[hints]

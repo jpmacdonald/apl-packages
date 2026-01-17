@@ -1,0 +1,19 @@
+[package]
+name = "node"
+description = "JavaScript runtime built on Chrome's V8 JavaScript engine"
+homepage = "https://nodejs.org/"
+license = "MIT"
+tags = ["runtime", "javascript", "ports"]
+
+[discovery]
+ports = "node"
+
+[assets]
+skip_checksums = false
+
+[dependencies]
+
+[install]
+bin = ["node", "npm", "npx"]
+
+[hints]

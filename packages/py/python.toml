@@ -1,0 +1,19 @@
+[package]
+name = "python"
+description = "Interpreted, high-level, general-purpose programming language"
+homepage = "https://www.python.org/"
+license = "Python-2.0"
+tags = ["language", "interpreter", "ports"]
+
+[discovery]
+ports = "python"
+
+[assets]
+skip_checksums = false
+
+[dependencies]
+
+[install]
+bin = ["python3", "pip3"]
+
+[hints]
