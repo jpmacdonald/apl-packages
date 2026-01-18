@@ -1,0 +1,25 @@
+[package]
+name = "zstd"
+description = "Zstandard - Fast real-time compression algorithm"
+homepage = "https://facebook.github.io/zstd/"
+license = "BSD-3-Clause"
+tags = ["library", "compression"]
+
+[discovery]
+github = "facebook/zstd"
+tag_pattern = "v{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libzstd.a"]
+include = ["zstd.h"]
+
+[hints]
+post_install = "zstd headers and static library have been installed."

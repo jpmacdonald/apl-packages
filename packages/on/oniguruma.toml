@@ -1,0 +1,25 @@
+[package]
+name = "oniguruma"
+description = "A regular expression library"
+homepage = "https://github.com/kkos/oniguruma"
+license = "BSD-2-Clause"
+tags = ["library", "regex"]
+
+[discovery]
+github = "kkos/oniguruma"
+tag_pattern = "v{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libonig.a"]
+include = ["oniguruma.h", "oniggnu.h"]
+
+[hints]
+post_install = "oniguruma headers and static library have been installed."

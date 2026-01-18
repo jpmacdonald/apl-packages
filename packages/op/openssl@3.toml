@@ -1,0 +1,25 @@
+[package]
+name = "openssl@3"
+description = "Cryptography and SSL/TLS Toolkit"
+homepage = "https://www.openssl.org/"
+license = "Apache-2.0"
+tags = ["library", "security"]
+
+[discovery]
+github = "openssl/openssl"
+tag_pattern = "openssl-{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libssl.a", "libcrypto.a"]
+include = ["openssl"]
+
+[hints]
+post_install = "OpenSSL 3 headers and static libraries have been installed."

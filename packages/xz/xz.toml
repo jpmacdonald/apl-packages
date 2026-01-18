@@ -1,0 +1,25 @@
+[package]
+name = "xz"
+description = "General-purpose data compression software with high compression ratio"
+homepage = "https://tukaani.org/xz/"
+license = "Public Domain"
+tags = ["library", "compression"]
+
+[discovery]
+github = "tukaani-project/xz"
+tag_pattern = "v{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["liblzma.a"]
+include = ["lzma.h"]
+
+[hints]
+post_install = "xz (lzma) headers and static library have been installed."

@@ -1,0 +1,25 @@
+[package]
+name = "yyjson"
+description = "A high performance JSON library written in ANSI C"
+homepage = "https://github.com/ibireme/yyjson"
+license = "MIT"
+tags = ["library", "json"]
+
+[discovery]
+github = "ibireme/yyjson"
+tag_pattern = "v{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libyyjson.a"]
+include = ["yyjson.h"]
+
+[hints]
+post_install = "yyjson headers and static library have been installed."

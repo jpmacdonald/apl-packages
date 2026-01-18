@@ -1,0 +1,25 @@
+[package]
+name = "pcre2"
+description = "Perl Compatible Regular Expressions"
+homepage = "https://www.pcre.org/"
+license = "BSD-3-Clause"
+tags = ["library", "regex"]
+
+[discovery]
+github = "PCRE2Project/pcre2"
+tag_pattern = "pcre2-{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libpcre2-8.a"]
+include = ["pcre2.h"]
+
+[hints]
+post_install = "pcre2 headers and static library have been installed."
