@@ -17,7 +17,7 @@ include_prereleases = false
 skip_checksums = false
 
 [dependencies]
-runtime = ["python@3.13"]
+runtime = ["python"]
 build = []
 optional = []
 
