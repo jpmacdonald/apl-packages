@@ -3,10 +3,7 @@ name = "jq"
 description = "Lightweight and flexible command-line JSON processor"
 homepage = "https://jqlang.github.io/jq/"
 license = "MIT"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
 github = "jqlang/jq"
@@ -17,7 +14,7 @@ include_prereleases = false
 skip_checksums = false
 
 [dependencies]
-runtime = ["oniguruma"]
+runtime = []
 build = []
 optional = []
 

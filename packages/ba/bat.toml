@@ -3,10 +3,7 @@ name = "bat"
 description = "Clone of cat(1) with syntax highlighting and Git integration"
 homepage = "https://github.com/sharkdp/bat"
 license = "Apache-2.0 OR MIT"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
 github = "sharkdp/bat"
@@ -17,10 +14,7 @@ include_prereleases = false
 skip_checksums = false
 
 [dependencies]
-runtime = [
-    "libgit2",
-    "oniguruma",
-]
+runtime = []
 build = []
 optional = []
 
