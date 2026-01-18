@@ -1,0 +1,12 @@
+[package]
+name = "apl"
+description = "A Package Layer for macOS"
+homepage = "https://github.com/jpmacdonald/apl"
+license = "MIT"
+
+[discovery]
+github = "jpmacdonald/apl"
+tag_pattern = "v{{version}}"
+
+[install]
+bin = ["apl"]
