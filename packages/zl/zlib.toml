@@ -1,0 +1,25 @@
+[package]
+name = "zlib"
+description = "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
+homepage = "https://zlib.net/"
+license = "Zlib"
+tags = ["compression", "library"]
+
+[discovery]
+github = "madler/zlib"
+tag_pattern = "v{{version}}"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+lib = ["libz.a"]
+include = ["zlib.h", "zconf.h"]
+
+[hints]
+post_install = "zlib headers and static library have been installed."
