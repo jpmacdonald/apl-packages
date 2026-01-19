@@ -3,10 +3,7 @@ name = "age"
 description = "Simple, modern, secure file encryption"
 homepage = "https://github.com/FiloSottile/age"
 license = "BSD-3-Clause"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
 github = "FiloSottile/age"
@@ -22,6 +19,7 @@ build = []
 optional = []
 
 [install]
+bin = ["age", "age-keygen", "age-inspect"]
 lib = []
 include = []
 
