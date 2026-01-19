@@ -3,10 +3,7 @@ name = "k9s"
 description = "Kubernetes CLI To Manage Your Clusters In Style!"
 homepage = "https://k9scli.io/"
 license = "Apache-2.0"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
 github = "derailed/k9s"
@@ -22,6 +19,7 @@ build = []
 optional = []
 
 [install]
+bin = ["k9s"]
 lib = []
 include = []
 

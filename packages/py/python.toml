@@ -1,15 +1,23 @@
 [package]
 name = "python"
-description = "Interpreted, high-level, general-purpose programming language"
-homepage = "https://www.python.org/"
+description = "Interpreted, high-level, general-purpose programming language (Standalone Builds)"
+homepage = "https://github.com/indygreg/python-build-standalone"
 license = "Python-2.0"
-tags = ["language", "interpreter", "ports"]
+tags = ["language", "interpreter", "devops"]
 
 [discovery]
-ports = "python"
+github = "indygreg/python-build-standalone"
+tag_pattern = "cpython-{{version}}"
+include_prereleases = false
 
 [assets]
-skip_checksums = false
+skip_checksums = true # Standalone builds use a custom checksum format
+
+[assets.x86_64-macos]
+suffix = "x86_64-apple-darwin-install_only.tar.gz"
+
+[assets.arm64-macos]
+suffix = "aarch64-apple-darwin-install_only.tar.gz"
 
 [dependencies]
 
@@ -17,3 +25,4 @@ skip_checksums = false
 bin = ["python3", "pip3"]
 
 [hints]
+post_install = "This is a standalone Python build. Use 'python3' to run."

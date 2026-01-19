@@ -1,0 +1,31 @@
+[package]
+name = "flux"
+description = "Flux CD command-line interface"
+homepage = "https://github.com/fluxcd/flux2"
+license = "Apache-2.0"
+tags = ["cd", "kubernetes", "gitops"]
+
+[discovery]
+github = "fluxcd/flux2"
+tag_pattern = "v{{version}}"
+include_prereleases = false
+
+[assets]
+skip_checksums = false
+
+[assets.x86_64-macos]
+suffix = "flux_{{version}}_darwin_amd64.tar.gz"
+
+[assets.arm64-macos]
+suffix = "flux_{{version}}_darwin_arm64.tar.gz"
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["flux"]
+
+[hints]
+post_install = ""

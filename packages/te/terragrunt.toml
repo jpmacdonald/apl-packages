@@ -3,10 +3,7 @@ name = "terragrunt"
 description = "Thin wrapper for Terraform e.g. for locking state"
 homepage = "https://terragrunt.gruntwork.io/"
 license = "MIT"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
 github = "gruntwork-io/terragrunt"
@@ -21,7 +18,7 @@ runtime = []
 build = []
 optional = []
 
-[install]
+bin = ["terragrunt"]
 lib = []
 include = []
 
