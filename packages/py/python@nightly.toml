@@ -1,0 +1,21 @@
+[package]
+name = "python@nightly"
+description = "Interpreted, high-level, general-purpose programming language (nightly builds)"
+homepage = "https://www.python.org/"
+license = "Python-2.0"
+tags = ["language", "interpreter", "nightly"]
+
+[discovery]
+ports = "python@nightly"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["openssl@3", "sqlite", "zlib", "xz", "libffi", "readline", "ncurses"]
+
+[install]
+bin = ["python3", "pip3"]
+
+[hints]
+post_install = "Python nightly has been built from source. This is bleeding-edge and may be unstable."

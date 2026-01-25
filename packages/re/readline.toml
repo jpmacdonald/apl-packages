@@ -1,0 +1,19 @@
+[package]
+name = "readline"
+description = "GNU Readline library for command-line editing"
+homepage = "https://tiswww.case.edu/php/chet/readline/rltop.html"
+license = "GPL-3.0-or-later"
+tags = ["library", "cli"]
+
+[discovery]
+ports = "readline"
+
+[assets]
+skip_checksums = true
+
+[install]
+lib = ["lib/libreadline.a", "lib/libhistory.a"]
+include = ["include/readline"]
+
+[hints]
+post_install = "Readline headers and static library are installed in the APL Sysroot."

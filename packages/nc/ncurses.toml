@@ -1,0 +1,19 @@
+[package]
+name = "ncurses"
+description = "Terminal user interface library"
+homepage = "https://invisible-island.net/ncurses/"
+license = "MIT"
+tags = ["library", "tui"]
+
+[discovery]
+ports = "ncurses"
+
+[assets]
+skip_checksums = true
+
+[install]
+lib = ["lib/libncursesw.a"]
+include = ["include/ncursesw"]
+
+[hints]
+post_install = "ncurses headers and static library are installed in the APL Sysroot."

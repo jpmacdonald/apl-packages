@@ -1,0 +1,20 @@
+[package]
+name = "sqlite"
+description = "C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine"
+homepage = "https://www.sqlite.org/"
+license = "blessing"
+tags = ["database", "library"]
+
+[discovery]
+ports = "sqlite"
+
+[assets]
+skip_checksums = true
+
+[install]
+bin = ["sqlite3"]
+lib = ["lib/libsqlite3.a"]
+include = ["include/sqlite3.h", "include/sqlite3ext.h"]
+
+[hints]
+post_install = "SQLite3 binary and static library are installed in the APL Sysroot."

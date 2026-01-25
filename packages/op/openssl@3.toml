@@ -6,8 +6,7 @@ license = "Apache-2.0"
 tags = ["library", "security"]
 
 [discovery]
-github = "openssl/openssl"
-tag_pattern = "openssl-{{version}}"
+ports = "openssl@3.5"
 
 [assets]
 skip_checksums = true

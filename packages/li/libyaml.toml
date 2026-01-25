@@ -3,15 +3,10 @@ name = "libyaml"
 description = "YAML Parser"
 homepage = "https://github.com/yaml/libyaml"
 license = "MIT"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["imported", "homebrew"]
 
 [discovery]
-github = "yaml/libyaml"
-tag_pattern = "{{version}}"
-include_prereleases = false
+ports = "libyaml"
 
 [assets]
 skip_checksums = false

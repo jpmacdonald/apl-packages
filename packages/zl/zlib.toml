@@ -6,8 +6,7 @@ license = "Zlib"
 tags = ["compression", "library"]
 
 [discovery]
-github = "madler/zlib"
-tag_pattern = "v{{version}}"
+ports = "zlib"
 
 [assets]
 skip_checksums = true

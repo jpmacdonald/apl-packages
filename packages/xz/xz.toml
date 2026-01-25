@@ -6,8 +6,7 @@ license = "Public Domain"
 tags = ["library", "compression"]
 
 [discovery]
-github = "tukaani-project/xz"
-tag_pattern = "v{{version}}"
+ports = "xz"
 
 [assets]
 skip_checksums = true

@@ -1,0 +1,19 @@
+[package]
+name = "libffi"
+description = "A portable foreign-function interface library"
+homepage = "https://sourceware.org/libffi/"
+license = "MIT"
+tags = ["library", "ffi"]
+
+[discovery]
+ports = "libffi"
+
+[assets]
+skip_checksums = true
+
+[install]
+lib = ["lib/libffi.a"]
+include = ["include/ffi.h", "include/ffitarget.h"]
+
+[hints]
+post_install = "libffi headers and static library are installed in the APL Sysroot."

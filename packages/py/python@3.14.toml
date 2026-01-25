@@ -1,12 +1,12 @@
 [package]
-name = "python"
-description = "Interpreted, high-level, general-purpose programming language (stable)"
+name = "python@3.14"
+description = "Interpreted, high-level, general-purpose programming language (3.14.x)"
 homepage = "https://www.python.org/"
 license = "Python-2.0"
 tags = ["language", "interpreter"]
 
 [discovery]
-ports = "python"
+ports = "python@3.14"
 
 [assets]
 skip_checksums = true
@@ -18,4 +18,4 @@ runtime = ["openssl@3", "sqlite", "zlib", "xz", "libffi", "readline", "ncurses"]
 bin = ["python3", "pip3"]
 
 [hints]
-post_install = "Python has been built from source and installed in the APL Sysroot."
+post_install = "Python 3.14.x has been built from source and installed in the APL Sysroot."
