@@ -18,6 +18,7 @@ runtime = []
 build = []
 optional = []
 
+[install]
 bin = ["terragrunt"]
 lib = []
 include = []

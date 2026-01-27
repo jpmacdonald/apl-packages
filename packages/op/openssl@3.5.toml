@@ -1,5 +1,5 @@
 [package]
-name = "openssl@3"
+name = "openssl@3.5"
 description = "Cryptography and SSL/TLS Toolkit"
 homepage = "https://www.openssl.org/"
 license = "Apache-2.0"

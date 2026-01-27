@@ -17,7 +17,7 @@ include_prereleases = false
 skip_checksums = false
 
 [dependencies]
-runtime = ["openssl@3"]
+runtime = ["openssl@3.5"]
 build = []
 optional = []
 

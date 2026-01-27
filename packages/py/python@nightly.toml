@@ -12,7 +12,7 @@ ports = "python@nightly"
 skip_checksums = true
 
 [dependencies]
-runtime = ["openssl@3", "sqlite", "zlib", "xz", "libffi", "readline", "ncurses"]
+runtime = ["openssl@3.5", "sqlite", "zlib", "xz", "libffi", "readline", "ncurses"]
 
 [install]
 bin = ["python3", "pip3"]
