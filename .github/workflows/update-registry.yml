@@ -11,7 +11,7 @@ on:
     paths:
       - 'packages/**'
   repository_dispatch:
-    types: [release]
+    types: [release, ports-updated]
   workflow_dispatch:  # Manual trigger
 
 jobs:

@@ -6,8 +6,7 @@ license = "BSD-3-Clause"
 tags = ["library", "regex"]
 
 [discovery]
-github = "PCRE2Project/pcre2"
-tag_pattern = "pcre2-{{version}}"
+ports = "pcre2"
 
 [assets]
 skip_checksums = true
