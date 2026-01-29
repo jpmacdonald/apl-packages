@@ -1,20 +1,15 @@
 [package]
 name = "cmake"
 description = "Cross-platform make"
-homepage = "https://www.cmake.org/"
+homepage = "https://cmake.org/"
 license = "BSD-3-Clause"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["build-tool", "development"]
 
 [discovery]
-github = "Kitware/CMake"
-tag_pattern = "{{version}}"
-include_prereleases = false
+ports = "cmake"
 
 [assets]
-skip_checksums = false
+skip_checksums = true
 
 [dependencies]
 runtime = []
@@ -22,8 +17,7 @@ build = []
 optional = []
 
 [install]
-lib = []
-include = []
+bin = ["cmake", "ctest", "cpack"]
 
 [hints]
-post_install = ""
+post_install = "cmake, ctest, and cpack are now available."

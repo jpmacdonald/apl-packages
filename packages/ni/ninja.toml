@@ -3,18 +3,13 @@ name = "ninja"
 description = "Small build system for use with gyp or CMake"
 homepage = "https://ninja-build.org/"
 license = "Apache-2.0"
-tags = [
-    "imported",
-    "homebrew",
-]
+tags = ["build-tool", "development"]
 
 [discovery]
-github = "ninja-build/ninja"
-tag_pattern = "{{version}}"
-include_prereleases = false
+ports = "ninja"
 
 [assets]
-skip_checksums = false
+skip_checksums = true
 
 [dependencies]
 runtime = []
@@ -22,8 +17,7 @@ build = []
 optional = []
 
 [install]
-lib = []
-include = []
+bin = ["ninja"]
 
 [hints]
-post_install = ""
+post_install = "ninja build system is now available."

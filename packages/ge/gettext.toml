@@ -1,0 +1,25 @@
+[package]
+name = "gettext"
+description = "GNU internationalization (i18n) and localization (l10n) library"
+homepage = "https://www.gnu.org/software/gettext/"
+license = "GPL-3.0-or-later"
+tags = ["library", "i18n", "localization"]
+
+[discovery]
+ports = "gettext"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["ncurses"]
+build = []
+optional = []
+
+[install]
+bin = ["gettext", "msgfmt", "msgmerge", "xgettext"]
+lib = ["libintl.a"]
+include = ["libintl.h"]
+
+[hints]
+post_install = "GNU gettext tools and libintl are now available."

@@ -1,0 +1,25 @@
+[package]
+name = "expat"
+description = "XML parser library written in C"
+homepage = "https://libexpat.github.io/"
+license = "MIT"
+tags = ["library", "xml", "parser"]
+
+[discovery]
+ports = "expat"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["xmlwf"]
+lib = ["libexpat.a"]
+include = ["expat.h"]
+
+[hints]
+post_install = "expat XML parser library is now available."

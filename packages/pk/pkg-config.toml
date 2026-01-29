@@ -1,0 +1,23 @@
+[package]
+name = "pkg-config"
+description = "Helper tool for compiling applications and libraries"
+homepage = "https://www.freedesktop.org/wiki/Software/pkg-config/"
+license = "GPL-2.0-or-later"
+tags = ["build-tool", "development"]
+
+[discovery]
+ports = "pkg-config"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["pkg-config"]
+
+[hints]
+post_install = "pkg-config is now available for library discovery."

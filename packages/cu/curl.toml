@@ -1,0 +1,25 @@
+[package]
+name = "curl"
+description = "Command line tool and library for transferring data with URLs"
+homepage = "https://curl.se/"
+license = "curl"
+tags = ["library", "networking", "http"]
+
+[discovery]
+ports = "curl"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["openssl@3.5", "zlib"]
+build = []
+optional = []
+
+[install]
+bin = ["curl"]
+lib = ["libcurl.a"]
+include = ["curl/curl.h"]
+
+[hints]
+post_install = "curl CLI and libcurl are now available."

@@ -1,0 +1,25 @@
+[package]
+name = "libiconv"
+description = "Character set conversion library"
+homepage = "https://www.gnu.org/software/libiconv/"
+license = "LGPL-2.1-or-later"
+tags = ["library", "encoding", "unicode"]
+
+[discovery]
+ports = "libiconv"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["iconv"]
+lib = ["libiconv.a", "libcharset.a"]
+include = ["iconv.h"]
+
+[hints]
+post_install = "libiconv encoding conversion library is now available."
