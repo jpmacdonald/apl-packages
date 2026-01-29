@@ -1,0 +1,23 @@
+[package]
+name = "git"
+description = "Distributed version control system"
+homepage = "https://git-scm.com/"
+license = "GPL-2.0-only"
+tags = ["vcs", "development"]
+
+[discovery]
+ports = "git"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["openssl@3.5", "curl", "zlib", "expat", "pcre2"]
+build = []
+optional = []
+
+[install]
+bin = ["git", "git-receive-pack", "git-upload-pack", "git-upload-archive"]
+
+[hints]
+post_install = "git version control is now available."

@@ -1,0 +1,23 @@
+[package]
+name = "wget"
+description = "Internet file retriever"
+homepage = "https://www.gnu.org/software/wget/"
+license = "GPL-3.0-or-later"
+tags = ["networking", "download"]
+
+[discovery]
+ports = "wget"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["openssl@3.5", "zlib"]
+build = []
+optional = []
+
+[install]
+bin = ["wget"]
+
+[hints]
+post_install = "wget is now available."

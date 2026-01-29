@@ -1,0 +1,25 @@
+[package]
+name = "libjpeg-turbo"
+description = "JPEG image codec with SIMD acceleration"
+homepage = "https://libjpeg-turbo.org/"
+license = "IJG"
+tags = ["library", "image", "graphics"]
+
+[discovery]
+ports = "libjpeg-turbo"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = ["cmake"]
+optional = []
+
+[install]
+bin = ["cjpeg", "djpeg", "jpegtran", "rdjpgcom", "wrjpgcom"]
+lib = ["libjpeg.a", "libturbojpeg.a"]
+include = ["jpeglib.h", "turbojpeg.h"]
+
+[hints]
+post_install = "libjpeg-turbo library is now available."

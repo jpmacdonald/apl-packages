@@ -1,0 +1,25 @@
+[package]
+name = "libpng"
+description = "Library for manipulating PNG images"
+homepage = "http://www.libpng.org/pub/png/libpng.html"
+license = "Libpng"
+tags = ["library", "image", "graphics"]
+
+[discovery]
+ports = "libpng"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["zlib"]
+build = []
+optional = []
+
+[install]
+bin = ["libpng-config", "png-fix-itxt", "pngfix"]
+lib = ["libpng.a", "libpng16.a"]
+include = ["png.h", "pngconf.h"]
+
+[hints]
+post_install = "libpng library is now available."

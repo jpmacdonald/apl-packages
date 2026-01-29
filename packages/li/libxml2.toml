@@ -1,0 +1,25 @@
+[package]
+name = "libxml2"
+description = "GNOME XML library"
+homepage = "https://gitlab.gnome.org/GNOME/libxml2"
+license = "MIT"
+tags = ["library", "xml", "parser"]
+
+[discovery]
+ports = "libxml2"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["zlib", "xz", "libiconv"]
+build = []
+optional = []
+
+[install]
+bin = ["xmllint", "xmlcatalog"]
+lib = ["libxml2.a"]
+include = ["libxml2/libxml/parser.h"]
+
+[hints]
+post_install = "libxml2 library is now available."

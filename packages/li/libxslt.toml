@@ -1,0 +1,25 @@
+[package]
+name = "libxslt"
+description = "GNOME XSLT library"
+homepage = "https://gitlab.gnome.org/GNOME/libxslt"
+license = "MIT"
+tags = ["library", "xml", "xslt"]
+
+[discovery]
+ports = "libxslt"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["libxml2"]
+build = []
+optional = []
+
+[install]
+bin = ["xsltproc"]
+lib = ["libxslt.a", "libexslt.a"]
+include = ["libxslt/xslt.h"]
+
+[hints]
+post_install = "libxslt library is now available."
