@@ -13,7 +13,7 @@ skip_checksums = true
 
 [dependencies]
 runtime = ["freetype", "icu4c"]
-build = ["meson", "ninja"]
+build = ["autoconf", "automake", "libtool"]
 optional = []
 
 [install]
