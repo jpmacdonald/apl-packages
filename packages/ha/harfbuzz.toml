@@ -12,7 +12,7 @@ ports = "harfbuzz"
 skip_checksums = true
 
 [dependencies]
-runtime = ["freetype", "glib", "icu4c"]
+runtime = ["freetype", "icu4c"]
 build = ["meson", "ninja"]
 optional = []
 
