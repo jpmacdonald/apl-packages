@@ -1,0 +1,23 @@
+[package]
+name = "perl"
+description = "Practical Extraction and Report Language"
+homepage = "https://www.perl.org/"
+license = "Artistic-1.0-Perl"
+tags = ["language", "scripting"]
+
+[discovery]
+ports = "perl"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["perl", "perldoc", "cpan"]
+
+[hints]
+post_install = "Perl is now available."

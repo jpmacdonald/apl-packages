@@ -1,0 +1,25 @@
+[package]
+name = "flex"
+description = "Fast lexical analyzer generator"
+homepage = "https://github.com/westes/flex"
+license = "BSD-2-Clause"
+tags = ["build-tool", "parser", "development"]
+
+[discovery]
+ports = "flex"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["m4"]
+build = []
+optional = []
+
+[install]
+bin = ["flex"]
+lib = ["libfl.a"]
+include = ["FlexLexer.h"]
+
+[hints]
+post_install = "flex lexical analyzer generator is now available."

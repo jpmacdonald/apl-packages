@@ -1,0 +1,23 @@
+[package]
+name = "bison"
+description = "GNU parser generator"
+homepage = "https://www.gnu.org/software/bison/"
+license = "GPL-3.0-or-later"
+tags = ["build-tool", "parser", "development"]
+
+[discovery]
+ports = "bison"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["m4"]
+build = []
+optional = []
+
+[install]
+bin = ["bison", "yacc"]
+
+[hints]
+post_install = "GNU bison parser generator is now available."

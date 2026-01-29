@@ -1,0 +1,23 @@
+[package]
+name = "libtool"
+description = "Generic library support script"
+homepage = "https://www.gnu.org/software/libtool/"
+license = "GPL-2.0-or-later"
+tags = ["build-tool", "development"]
+
+[discovery]
+ports = "libtool"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["m4", "autoconf", "automake"]
+build = []
+optional = []
+
+[install]
+bin = ["libtool", "libtoolize"]
+
+[hints]
+post_install = "GNU libtool is now available."

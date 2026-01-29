@@ -1,0 +1,23 @@
+[package]
+name = "texinfo"
+description = "GNU documentation system"
+homepage = "https://www.gnu.org/software/texinfo/"
+license = "GPL-3.0-or-later"
+tags = ["documentation", "development"]
+
+[discovery]
+ports = "texinfo"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["ncurses"]
+build = []
+optional = []
+
+[install]
+bin = ["info", "install-info", "makeinfo", "texi2any", "texindex"]
+
+[hints]
+post_install = "GNU texinfo documentation tools are now available."
