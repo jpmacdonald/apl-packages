@@ -1,0 +1,23 @@
+[package]
+name = "meson"
+description = "Fast and user-friendly build system"
+homepage = "https://mesonbuild.com/"
+license = "Apache-2.0"
+tags = ["build", "development"]
+
+[discovery]
+ports = "meson"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["python"]
+build = []
+optional = []
+
+[install]
+bin = ["meson"]
+
+[hints]
+post_install = "meson build system is now available."

@@ -1,0 +1,25 @@
+[package]
+name = "icu4c"
+description = "International Components for Unicode"
+homepage = "https://icu.unicode.org/"
+license = "ICU"
+tags = ["library", "unicode", "i18n"]
+
+[discovery]
+ports = "icu4c"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["icuinfo"]
+lib = ["libicuuc.a", "libicui18n.a", "libicudata.a"]
+include = ["unicode/uchar.h"]
+
+[hints]
+post_install = "icu4c library is now available."

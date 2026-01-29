@@ -1,0 +1,25 @@
+[package]
+name = "freetype"
+description = "Font rendering library"
+homepage = "https://freetype.org/"
+license = "FTL"
+tags = ["library", "fonts", "graphics"]
+
+[discovery]
+ports = "freetype"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["libpng", "zlib", "bzip2"]
+build = []
+optional = []
+
+[install]
+bin = ["freetype-config"]
+lib = ["libfreetype.a"]
+include = ["freetype2/freetype/freetype.h"]
+
+[hints]
+post_install = "freetype library is now available."

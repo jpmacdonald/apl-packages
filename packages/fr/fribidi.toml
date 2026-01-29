@@ -1,0 +1,25 @@
+[package]
+name = "fribidi"
+description = "Unicode Bidirectional Algorithm library"
+homepage = "https://github.com/fribidi/fribidi"
+license = "LGPL-2.1-or-later"
+tags = ["library", "unicode", "text"]
+
+[discovery]
+ports = "fribidi"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = ["meson", "ninja"]
+optional = []
+
+[install]
+bin = ["fribidi"]
+lib = ["libfribidi.a"]
+include = ["fribidi/fribidi.h"]
+
+[hints]
+post_install = "fribidi library is now available."

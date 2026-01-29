@@ -1,0 +1,23 @@
+[package]
+name = "gperf"
+description = "Perfect hash function generator"
+homepage = "https://www.gnu.org/software/gperf/"
+license = "GPL-3.0-or-later"
+tags = ["development", "build"]
+
+[discovery]
+ports = "gperf"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["gperf"]
+
+[hints]
+post_install = "gperf is now available."

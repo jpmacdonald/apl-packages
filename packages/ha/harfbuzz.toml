@@ -1,0 +1,25 @@
+[package]
+name = "harfbuzz"
+description = "Text shaping library"
+homepage = "https://harfbuzz.github.io/"
+license = "MIT"
+tags = ["library", "fonts", "text"]
+
+[discovery]
+ports = "harfbuzz"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["freetype", "glib", "icu4c"]
+build = ["meson", "ninja"]
+optional = []
+
+[install]
+bin = ["hb-view", "hb-shape", "hb-info"]
+lib = ["libharfbuzz.a"]
+include = ["harfbuzz/hb.h"]
+
+[hints]
+post_install = "harfbuzz library is now available."
