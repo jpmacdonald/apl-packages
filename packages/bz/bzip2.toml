@@ -1,0 +1,25 @@
+[package]
+name = "bzip2"
+description = "Freely available, high-quality data compressor"
+homepage = "https://sourceware.org/bzip2/"
+license = "bzip2-1.0.6"
+tags = ["compression", "library"]
+
+[discovery]
+ports = "bzip2"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["bzip2", "bunzip2", "bzcat", "bzip2recover"]
+lib = ["libbz2.a"]
+include = ["bzlib.h"]
+
+[hints]
+post_install = "bzip2 compression tools and library are now available."

@@ -1,0 +1,23 @@
+[package]
+name = "automake"
+description = "Tool for generating GNU Standards-compliant Makefiles"
+homepage = "https://www.gnu.org/software/automake/"
+license = "GPL-2.0-or-later"
+tags = ["build-tool", "development"]
+
+[discovery]
+ports = "automake"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["autoconf"]
+build = []
+optional = []
+
+[install]
+bin = ["automake", "aclocal"]
+
+[hints]
+post_install = "GNU automake is now available."

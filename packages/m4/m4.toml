@@ -1,0 +1,23 @@
+[package]
+name = "m4"
+description = "GNU macro processor"
+homepage = "https://www.gnu.org/software/m4/"
+license = "GPL-3.0-or-later"
+tags = ["build-tool", "development"]
+
+[discovery]
+ports = "m4"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["m4"]
+
+[hints]
+post_install = "GNU m4 macro processor is now available."

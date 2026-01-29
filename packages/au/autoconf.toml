@@ -1,0 +1,23 @@
+[package]
+name = "autoconf"
+description = "Automatic configure script builder"
+homepage = "https://www.gnu.org/software/autoconf/"
+license = "GPL-3.0-or-later"
+tags = ["build-tool", "development"]
+
+[discovery]
+ports = "autoconf"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = ["m4"]
+build = []
+optional = []
+
+[install]
+bin = ["autoconf", "autoheader", "autom4te", "autoreconf", "autoscan", "autoupdate", "ifnames"]
+
+[hints]
+post_install = "GNU autoconf is now available."

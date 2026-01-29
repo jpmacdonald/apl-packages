@@ -1,0 +1,25 @@
+[package]
+name = "gdbm"
+description = "GNU database manager"
+homepage = "https://www.gnu.org/software/gdbm/"
+license = "GPL-3.0-or-later"
+tags = ["database", "library"]
+
+[discovery]
+ports = "gdbm"
+
+[assets]
+skip_checksums = true
+
+[dependencies]
+runtime = []
+build = []
+optional = []
+
+[install]
+bin = ["gdbmtool", "gdbm_dump", "gdbm_load"]
+lib = ["libgdbm.a"]
+include = ["gdbm.h"]
+
+[hints]
+post_install = "GNU dbm library is now available."
