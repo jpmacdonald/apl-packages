@@ -12,7 +12,12 @@ on:
       - 'packages/**'
   repository_dispatch:
     types: [release, ports-updated]
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: 'Force full rebuild (ignore existing index)'
+        type: boolean
+        default: false
 
 jobs:
   update-index:
@@ -52,6 +57,7 @@ jobs:
           ./apl/target/release/apl-pkg \
             --registry packages \
             index \
+            ${{ github.event.inputs.full_rebuild == 'true' && '--full' || '' }} \
             --output index
 
       - name: Sign Index
