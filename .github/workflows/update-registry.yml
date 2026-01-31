@@ -57,6 +57,7 @@ jobs:
       - name: Sign Index
         env:
           APL_SIGNING_KEY: ${{ secrets.APL_SIGNING_KEY }}
+          APL_SIGNING_KEY_ID: ${{ secrets.APL_SIGNING_KEY_ID }}
         run: |
           ./apl/target/release/apl-pkg sign \
             --input index \
